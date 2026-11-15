@@ -1,0 +1,479 @@
+/* MAIN PAGE */
+
+.calls-page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 28px;
+    background: #07111f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+
+/* HEADER */
+
+.calls-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.calls-header h2 {
+    font-size: 28px;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.calls-header p {
+    color: #7f91aa;
+    font-size: 13px;
+    margin: 7px 0 0;
+}
+
+.calls-header-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #101e31;
+    color: #a78bfa;
+    font-size: 23px;
+    border: 1px solid #263b58;
+}
+
+
+/* INITIAL CALL BUTTON */
+
+.calls-home {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.calls-main-button {
+    width: 85px;
+    height: 85px;
+    border: none;
+    border-radius: 50%;
+    background: #17283b;
+    color: #ffffff;
+    font-size: 34px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calls-main-button:hover {
+    background: #263b58;
+    transform: scale(1.07);
+}
+
+.calls-home h3 {
+    color: #aebbd0;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+
+/* DIAL OVERLAY */
+
+.calls-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(3, 9, 19, 0.58);
+}
+
+
+/* DIAL CARD */
+
+.calls-dial-card {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    padding: 35px;
+    box-sizing: border-box;
+    background: #101e31;
+    border: 1px solid #263b58;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.calls-close-button {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #1b2b40;
+    color: #9aaac0;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.calls-close-button:hover {
+    background: #344963;
+    color: white;
+}
+
+.calls-dial-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(112,70,255,0.15);
+    color: #a78bfa;
+    font-size: 32px;
+}
+
+.calls-dial-card h3 {
+    font-size: 21px;
+    margin: 0;
+    color: white;
+}
+
+.calls-dial-card > p {
+    color: #7f91aa;
+    font-size: 13px;
+    margin: 10px 0 25px;
+}
+
+
+/* PHONE INPUT */
+
+.calls-input-group {
+    display: flex;
+    align-items: center;
+    background: #07111f;
+    border: 1px solid #263b58;
+    border-radius: 12px;
+    padding: 0 14px;
+    height: 52px;
+    margin-bottom: 18px;
+}
+
+.calls-input-group:focus-within {
+    border-color: #7046ff;
+    box-shadow: 0 0 0 3px rgba(112,70,255,0.12);
+}
+
+.calls-country-code {
+    color: #a78bfa;
+    font-size: 14px;
+    font-weight: 600;
+    padding-right: 12px;
+    border-right: 1px solid #263b58;
+}
+
+.calls-input-group input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding-left: 12px;
+    font-size: 15px;
+}
+
+.calls-input-group input::placeholder {
+    color: #71839b;
+}
+
+
+/* START CALL */
+
+.calls-start-button {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 12px;
+    background: #22c55e;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calls-start-button:hover {
+    background: #16a34a;
+}
+
+.calls-start-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* ACTIVE / INCOMING CALL SCREEN */
+
+.calls-screen {
+    max-width: 460px;
+    width: 100%;
+    min-height: 420px;
+    margin: 30px auto;
+    background: #101e31;
+    border: 1px solid #263b58;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.calls-screen-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calls-status-pill {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: #a78bfa;
+    background: rgba(112,70,255,0.14);
+    padding: 9px 15px;
+    border-radius: 20px;
+}
+
+
+/* AVATAR */
+
+.calls-avatar {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    margin: 30px 0 20px;
+    background: linear-gradient(135deg,#6338ff,#9333ea);
+    border: 4px solid rgba(167,139,250,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: white;
+    overflow: hidden;
+}
+
+.calls-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.calls-screen-content h2 {
+    color: white;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.calls-screen-subtitle {
+    color: #7f91aa;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+
+/* ACCEPT / REJECT */
+
+.calls-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    margin-top: 45px;
+}
+
+.calls-reject-button,
+.calls-accept-button {
+    width: 68px;
+    height: 68px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.calls-reject-button {
+    background: #ef4444;
+}
+
+.calls-accept-button {
+    background: #22c55e;
+}
+
+.calls-reject-button span,
+.calls-accept-button span {
+    font-size: 25px;
+}
+
+.calls-reject-button small,
+.calls-accept-button small {
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+.calls-reject-button:hover,
+.calls-accept-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* ACTIVE CALL BUTTONS */
+
+.calls-active-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.calls-mute-button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #344963;
+    background: #1a2b42;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.calls-mute-button:hover {
+    background: #263b58;
+}
+
+.calls-end-button {
+    width: 76px;
+    height: 76px;
+    border: none;
+    border-radius: 50%;
+    background: #ef4444;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.calls-end-button span {
+    font-size: 25px;
+}
+
+.calls-end-button small {
+    font-size: 10px;
+}
+
+.calls-end-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* STATUS */
+
+.calls-message {
+    text-align: center;
+    color: #a78bfa;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+
+/* AUDIO */
+
+.calls-page audio {
+    display: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .calls-page {
+        padding: 18px;
+        min-height: 100vh;
+    }
+
+    .calls-header h2 {
+        font-size: 24px;
+    }
+
+    .calls-home {
+        min-height: 350px;
+    }
+
+    .calls-dial-card {
+        padding: 30px 20px;
+    }
+
+    .calls-screen {
+        min-height: 400px;
+        padding: 22px;
+        margin-top: 15px;
+    }
+
+    .calls-avatar {
+        width: 105px;
+        height: 105px;
+    }
+
+    .calls-action-buttons {
+        gap: 55px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 360px) {
+
+    .calls-page {
+        padding: 12px;
+    }
+
+    .calls-dial-card {
+        padding: 25px 15px;
+    }
+
+    .calls-screen {
+        padding: 18px;
+    }
+
+    .calls-active-buttons {
+        gap: 20px;
+    }
+
+}
